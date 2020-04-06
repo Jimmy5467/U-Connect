@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#6200EA">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="Home"
+            android:textAlignment="center"
+            android:textColor="#232323"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="588dp"
+            android:background="@drawable/cs_button3"
+            android:elevation="40dp"
+            android:padding="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/departments"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hapticFeedbackEnabled="true"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toTopOf="@+id/courses"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/library"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+
+                    <LinearLayout
+                        android:layout_width="111dp"
+                        android:layout_height="114dp"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_department" />
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Institutes"
+                            android:textAlignment="center"
+                            android:textColor="#7A35FF"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/library"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:elevation="35dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hapticFeedbackEnabled="true"
+                    android:outlineAmbientShadowColor="@color/white"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toTopOf="@+id/gallery"
+                    app:layout_constraintEnd_toStartOf="@+id/departments"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="111dp"
+                        android:layout_height="114dp"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:elevation="1dp"
+                            android:background="@drawable/ic_library" />
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Library"
+                            android:textAlignment="center"
+                            android:textColor="#FF3835"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/courses"
+                    android:layout_width="153dp"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hapticFeedbackEnabled="true"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/gallery"
+                    app:layout_constraintTop_toBottomOf="@+id/departments">
+
+
+                    <LinearLayout
+                        android:layout_width="111dp"
+                        android:layout_height="114dp"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_courses" />
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Courses"
+                            android:textAlignment="center"
+                            android:textColor="#00BFA5"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/gallery"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hapticFeedbackEnabled="true"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintEnd_toStartOf="@+id/courses"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/library">
+
+
+                    <LinearLayout
+                        android:layout_width="111dp"
+                        android:layout_height="114dp"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_gallery" />
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Gallery"
+                            android:textAlignment="center"
+                            android:textColor="#29C4E6"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fact"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:hapticFeedbackEnabled="true"
+                    app:cardCornerRadius="30dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gallery">
+
+
+                    <LinearLayout
+                        android:layout_width="111dp"
+                        android:layout_height="114dp"
+                        android:layout_margin="20dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="76dp"
+                            android:layout_height="65dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_faculty" />
+
+                        <TextView
+                            android:layout_width="78dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Faculty"
+                            android:textAlignment="center"
+                            android:textColor="#3c40c6"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
